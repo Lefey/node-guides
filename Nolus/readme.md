@@ -106,6 +106,7 @@ sudo systemctl restart nolusd && sudo journalctl -u nolusd -f -o cat
 sudo journalctl -u nolusd -f -o cat
 ```
 # 4.Start from snapshot
+> Snapshots updated every 6 hours
 ```bash
 sudo systemctl stop nolusd
 cp $HOME/.nolus/data/priv_validator_state.json $HOME/.nolus/priv_validator_state.json.backup
