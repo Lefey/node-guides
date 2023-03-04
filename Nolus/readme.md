@@ -103,7 +103,7 @@ sudo systemctl restart nolusd && sudo journalctl -u nolusd -f -o cat
 
 ### Check node logs
 ```bash
-sudo journalctl -u nolusd -f -o cat
+sudo journalctl -fu nolusd -o cat
 ```
 # 4.Start from snapshot
 > Snapshots updated every 6 hours
@@ -114,4 +114,4 @@ rm -rf $HOME/.nolus/data $HOME/.nolus/wasm
 curl https://lefey.tech/nolus/nolus-snap.tar.gz | tar -zxvf - -C $HOME/.nolus --strip-components 2
 curl https://lefey.tech/nolus/nolus-wasm.tar.gz | tar -zxvf - -C $HOME/.nolus --strip-components 2
 mv $HOME/.nolus/priv_validator_state.json.backup $HOME/.nolus/data/priv_validator_state.json
-sudo systemctl start nolusd && journalctl -u nolusd -f -o cat
+sudo systemctl start nolusd && sudo journalctl -fu nolusd -o cat
