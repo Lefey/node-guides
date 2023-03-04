@@ -73,7 +73,7 @@ sed -i -e "s/^pruning *=.*/pruning = \"nothing\"/" $HOME/.nolus/config/app.toml
 ```
 ### Disable Indexer (optional) 
 ```bash
-indexer="null" && \
+indexer="null"
 sed -i -e "s/^indexer *=.*/indexer = \"$indexer\"/" $HOME/.nolus/config/config.toml
 ```
 # Service
